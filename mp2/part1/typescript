@@ -1,0 +1,106 @@
+Script started on Wed 13 Oct 2021 12:48:25 PM EDT
+]0;tuser@tutor-vserver: ~tuser@tutor-vserver:~$ gdb tinny[K[Ky.lnx
+GNU gdb (GDB) 7.0.1-debian
+Copyright (C) 2009 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "i486-linux-gnu".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>...
+Reading symbols from /home/tuser/tiny.lnx...(no debugging symbols found)...done.
+(gdb) tar rem /dev/ttyS0
+Remote debugging using /dev/ttyS0
+0x00100100 in _start ()
+(gdb) set $eip=0x100100
+(gdb) i reg
+eax            0x1	1
+ecx            0x6967c	431740
+edx            0x0	0
+ebx            0x0	0
+esp            0x5788c	0x5788c
+ebp            0x57890	0x57890
+esi            0x13e10	81424
+edi            0x51ffc	335868
+eip            0x100100	0x100100 <_start>
+eflags         0x206	[ PF IF ]
+cs             0x10	16
+ss             0x18	24
+ds             0x18	24
+es             0x18	24
+fs             0x18	24
+gs             0x18	24
+(gdb) x/x 0x200
+0x200:	0x00000000
+(gdb) set *()i)n)t) )*)[C0x200= 0[1@ [C[1@ [1P
+(gdb) set *(int *)0x200 = 0[C[C[C[C[C[C[12Px/x 0x200
+0x200:	0x00000000
+(gdb) x/x 0x200[C[C[C[C[C[Cset *(int *)0x200 = 0[C[C[C[C[C[C[12Px/x 0x200[C[C[C[C[C[C[4Pi regx/x 0x200[C[C[C[C[C[Cset *(int *)0x200 = 0[C[C[C[C[C[C[12Px/x 0x200[C[C[C[C[C[Cset *(int *)0x200 = 0[C[C[C[C[C[C[12Px/x 0x200[C[C[C[C[C[C[4Pi regset $eip=0x100100 0x100100[1@ 
+(gdb) set $eip = 0x100100[C[C[C[C[C[C[10Px/x 0x200[C[C[C[C[C[Cset *(int *)0x200 = 0[C[C[C[C[C[C[12Px/x 0x200[C[C[C[C[C[C[4Pi regset $eip=0x100100[C[C[C[C[C[Ctar rem /dev/ttyS0[C[C[C[C[C[C[1Pset $eip=0x100100[C[C[C[C[C[Ci reg[Kx/x 0x200[C[C[C[C[C[Cset *(int *)0x200 = 0[C[C[C[C[C[C[12Px/x 0x200[C[C[C[C[C[Cset $eip = 0x100100[C[C[C[C[C[C[Kx/41[Ki0x100100 0x100100
+0x100100 <_start>:	mov    $0x8,%eax
+0x100105 <_start+5>:	add    $0x3,%eax
+0x100108 <_start+8>:	mov    %eax,0x200
+0x10010d <_start+13>:	int3   
+(gdb) b *0x10005105
+Breakpoint 1 at 0x100105
+(gdb) c
+Continuing.
+
+Breakpoint 1, 0x00100105 in _start ()
+(gdb) i reg
+eax            0x8	8
+ecx            0x6967c	431740
+edx            0x0	0
+ebx            0x0	0
+esp            0x5788c	0x5788c
+ebp            0x57890	0x57890
+esi            0x13e10	81424
+edi            0x51ffc	335868
+eip            0x100105	0x100105 <_start+5>
+eflags         0x306	[ PF TF IF ]
+cs             0x10	16
+ss             0x18	24
+ds             0x18	24
+es             0x18	24
+fs             0x18	24
+gs             0x18	24
+(gdb) i regc[Kb *0x100105[K8
+Breakpoint 2 at 0x100108
+(gdb) c
+Continuing.
+
+Breakpoint 2, 0x00100108 in _start ()
+(gdb) cb *0x100108[C[C[C[C[C[C[6Pi regc[Ki reg
+eax            0xb	11
+ecx            0x6967c	431740
+edx            0x0	0
+ebx            0x0	0
+esp            0x5788c	0x5788c
+ebp            0x57890	0x57890
+esi            0x13e10	81424
+edi            0x51ffc	335868
+eip            0x100108	0x100108 <_start+8>
+eflags         0x302	[ TF IF ]
+cs             0x10	16
+ss             0x18	24
+ds             0x18	24
+es             0x18	24
+fs             0x18	24
+gs             0x18	24
+(gdb) i regc[Kb *0x100108[C[C[C[C[C[C[6Pi regc[Kb *0x100105[Kd
+Breakpoint 3 at 0x10010d
+(gdb) c
+Continuing.
+
+Breakpoint 3, 0x0010010d in _start ()
+(gdb) cb *0x10010d[C[C[C[C[C[C[6Pi reg
+eax            0xb	11
+ecx            0x6967c	431740
+edx            0x0	0
+ebx            0x0	0
+esp            0x5788c	0x5788c
+ebp            0x57890	0x57890
+esi            0x13e10	81424
+edi            0x51ffc	335868
+eip            0x

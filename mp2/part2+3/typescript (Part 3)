@@ -1,0 +1,96 @@
+Script started on Sat 06 Nov 2021 07:40:16 PM EDT
+tuser@tutor-vserver:~$ scp typescript nick1996@users.cs.umb.edu:cs341/mp3/[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cript[K[2Pexitgdb printbin.lnx[4@mtip -f[C[C[C[C[C[C[C[C[C[C[C[C[C[4Pgdb[C[C[C[C[C[C[C[C[C[C[C[C[C[4@mtip -f[C[C[C[C[C[C[C[C[C[C[C[C[C[1P.lnx[1P.lnx[1P.lnx[1P.lnx[1P.lnx[1P.lnx[1P.lnx[1P.lnxs.lnxt.lnxr.lnxn.lnxc.lnxp.lnxy.lnx
+For command help, type ~?
+For help on args, rerun without args
+Code starts at 0x100100
+Using board # 1 
+Please type <CR> to confirm console setting: 
+Setting console dev to COM2Console: colour EGA+ 80x25
+COM1 at 0x03f8 (irq = 4) is a 16550A
+COM2 at 0x02f8 (irq = 3) is a 16550A
+
+                 Welcome to UMB Tutor for the PC
+   UMB Tutor is a 32-bit protected-mode PC debugger/downloader,
+       based on Linux, UMB Tutor for m68k, and remote gdb.
+UMB Tutor is free software and you are welcome to distribute copies
+of it under certain conditions.  There is no warranty for this program.
+The copyright and warranty provisions follow the Gnu general public
+license, available for view in gdb and elsewhere.  Full sources available.
+--bugs, suggestions, questions to eoneil@cs.umb.edu
+
+Exception 3 at EIP=00057a9b: Breakpoint
+Tutor> ~downloading strncpy.lnx
+
+........Done.
+
+Download done, setting EIP to 100100.
+Tutor> go 100100
+Enter a string of characters:
+4120
+Enter the number of characters to copy:
+4
+The strncpy function returned the correct pointer value.
+The strncpy function copied the data correctly.
+The content of the first 4 characters of array s is: 4120
+Exception 3 at EIP=00100110: Breakpoint
+Tutor> go 10100  1  1 0100
+Enter a string of characters:
+342341242352345345234234235
+Enter the number of characters to copy:
+34234235245234534534534534534534
+The strncpy function returned the correct pointer value.
+The strncpy function copied the data correctly.
+The content of the first 648287622 characters of array s is: 342341242352345345234234235
+Please type <CR> to confirm console setting: 
+Setting console dev to COM2Console: colour EGA+ 80x25
+COM1 at 0x03f8 (irq = 4) is a 16550A
+COM2 at 0x02f8 (irq = 3) is a 16550A
+
+                 Welcome to UMB Tutor for the PC
+   UMB Tutor is a 32-bit protected-mode PC debugger/downloader,
+       based on Linux, UMB Tutor for m68k, and remote gdb.
+UMB Tutor is free software and you are welcome to distribute copies
+of it under certain conditions.  There is no warranty for this program.
+The copyright and warranty provisions follow the Gnu general public
+license, available for view in gdb and elsewhere.  Full sources available.
+--bugs, suggestions, questions to eoneil@cs.umb.edu
+
+Exception 3 at EIP=00057a9b: Breakpoint
+Tutor> ~downloading strncpy.lnx
+
+........Done.
+
+Download done, setting EIP to 100100.
+Tutor> go 100100
+Enter a string of characters:
+1234
+Enter the number of characters to copy:
+123456
+The strncpy function returned the correct pointer value.
+The strncpy function copied the data correctly.
+The content of the first 123456 characters of array s is: 1234
+Exception 3 at EIP=00100110: Breakpoint
+Tutor> go 100100
+Enter a string of characters:
+1234
+Enter the number of characters to copy:
+99The strncpy function returned the correct pointer value.
+The strncpy function copied the data correctly.
+The content of the first 99 characters of array s is: 1234
+Exception 3 at EIP=00100110: Breakpoint
+Tutor> go 100100
+Enter a string of characters:
+1
+Enter the number of characters to copy:
+1
+The strncpy function returned the correct pointer value.
+The strncpy function copied the data correctly.
+The content of the first 1 characters of array s is: 1234
+Exception 3 at EIP=00100110: Breakpoint
+Tutor> ~q 
+Quit handler: 
+killing process 1857 Leaving board #1
+tuser@tutor-vserver:~$ exit
+exit
+
+Script done on Sat 06 Nov 2021 07:43:44 PM EDT

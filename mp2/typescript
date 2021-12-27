@@ -1,0 +1,248 @@
+Script started on Wed 13 Oct 2021 12:42:50 PM EDT
+tuser@tutor-vserver:~$ exitmtip -f tutor.lnxls[Kscp nick1996@users.cs.umb.edu:cs341/mp1/tutor.* .[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgdb tiny.lnx[K[8Pexitmtip -f tutor.lnx[7Pake clean[3Pcat *.c[1Pls -alscp nick1996@users.cs.umb.edu:cs341/mp1/tutor.* .[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cexit[Kscript[2Pexitscript[2Pexitscp nick1996@users.cs.umb.edu:cs341/mp1/tutor.* .
+nick1996@users.cs.umb.edu's password: 
+tutor.c                                         0%    0     0.0KB/s   --:-- ETAtutor.c                                       100% 2321     2.3KB/s   00:00    
+tutor.lnx                                       0%    0     0.0KB/s   --:-- ETAtutor.lnx                                     100%   40KB  39.7KB/s   00:00    
+tutor.o                                         0%    0     0.0KB/s   --:-- ETAtutor.o                                       100% 7508     7.3KB/s   00:00    
+tuser@tutor-vserver:~$ scp nick1996@users.cs.umb.edu:cs341/mp1/tutor.* .[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cexit[Kmtip -f tutor.lnxls[Kmtip -f tutor.lnxls[K
+a.out       CR                         [0m[01;32mstrncpy.lnx[0m  [01;34mtestelf[0m       tiny.s
+countc.c    [01;34minclude[0m                    strncpy.o    testelf.syms  tutor.c
+[01;32mcount.lnx[0m   [01;34mlib[0m                        strncpy.s    [01;32mtest.lnx[0m      [01;32mtutor.lnx[0m
+count.o     nick1996@users.cs.umb.edu  [01;32mtest[0m         test.s        tutor.o
+count.s     strcpy.s                   [01;34mtestaout[0m     [01;32mtiny.lnx[0m      typescript
+count.syms  strncpyc.c                 test.c       tiny.o
+tuser@tutor-vserver:~$ lsscp nick1996@users.cs.umb.edu:cs341/mp1/tutor.* .[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cexit[Kmtip -f tutor.lnx
+For command help, type ~?
+For help on args, rerun without args
+Code starts at 0x100100
+Using board # 1 
+Please type <CR> to confirm console setting: 
+Setting console dev to COM2Console: colour EGA+ 80x25
+COM1 at 0x03f8 (irq = 4) is a 16550A
+COM2 at 0x02f8 (irq = 3) is a 16550A
+
+                 Welcome to UMB Tutor for the PC
+   UMB Tutor is a 32-bit protected-mode PC debugger/downloader,
+       based on Linux, UMB Tutor for m68k, and remote gdb.
+UMB Tutor is free software and you are welcome to distribute copies
+of it under certain conditions.  There is no warranty for this program.
+The copyright and warranty provisions follow the Gnu general public
+license, available for view in gdb and elsewhere.  Full sources available.
+--bugs, suggestions, questions to eoneil@cs.umb.edu
+
+Exception 3 at EIP=00057a9b: Breakpoint
+Tutor> ~downloading tutor.lnx
+
+..........Done.
+
+Download done, setting EIP to 100100.
+Tutor> qu  ~q 
+Quit handler: 
+killing process 2338 Leaving board #1
+tuser@tutor-vserver:~$ mtip -f tutor.lnx[C[C[1P.lnx[1P.lnx[1P.lnx[1P.lnxi.lnxn.lnxy.lnx
+For command help, type ~?
+For help on args, rerun without args
+Code starts at 0x100100
+Using board # 1 
+Please type <CR> to confirm console setting: 
+Setting console dev to COM2Console: colour EGA+ 80x25
+COM1 at 0x03f8 (irq = 4) is a 16550A
+COM2 at 0x02f8 (irq = 3) is a 16550A
+
+                 Welcome to UMB Tutor for the PC
+   UMB Tutor is a 32-bit protected-mode PC debugger/downloader,
+       based on Linux, UMB Tutor for m68k, and remote gdb.
+UMB Tutor is free software and you are welcome to distribute copies
+of it under certain conditions.  There is no warranty for this program.
+The copyright and warranty provisions follow the Gnu general public
+license, available for view in gdb and elsewhere.  Full sources available.
+--bugs, suggestions, questions to eoneil@cs.umb.edu
+
+Exception 3 at EIP=00057a9b: Breakpoint
+Tutor> ~downloading tiny.lnx
+
+.Done.
+
+Download done, setting EIP to 100100.
+Tutor> md 100100
+00100100    b8 08 00 00 00 83 c0 03 a3 00 02 00 00 cc d4 83 ................
+Tutor> rd
+EAX=00000001 EBX=00000000   EBP=00057890
+EDX=00000000 ECX=0006967c   ESP=0005788c
+ESI=00013e10 EDI=00051ffc   EIP=00100100
+EFLAGS=0206 (IF=1 SF=0 ZF=0 CF=0 OF=0)
+Tutor> md 200
+00000200    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 ................
+Tutor> ms 200 00000000
+Tutor> md 200
+00000200    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 ................
+Tutor> rs eip 100100
+Tutor> t
+Exception 1 at EIP=00100105: Debugger interrupt
+Tutor> rd
+EAX=00000008 EBX=00000000   EBP=00057890
+EDX=00000000 ECX=0006967c   ESP=0005788c
+ESI=00013e10 EDI=00051ffc   EIP=00100105
+EFLAGS=0306 (IF=1 SF=0 ZF=0 CF=0 OF=0)
+Tutor> md 200
+00000200    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 ................
+Tutor> t
+Exception 1 at EIP=00100108: Debugger interrupt
+Tutor> rd
+EAX=0000000b EBX=00000000   EBP=00057890
+EDX=00000000 ECX=0006967c   ESP=0005788c
+ESI=00013e10 EDI=00051ffc   EIP=00100108
+EFLAGS=0302 (IF=1 SF=0 ZF=0 CF=0 OF=0)
+Tutor> md 200
+00000200    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 ................
+Tutor> t
+Exception 1 at EIP=0010010d: Debugger interrupt
+Tutor> rd
+EAX=0000000b EBX=00000000   EBP=00057890
+EDX=00000000 ECX=0006967c   ESP=0005788c
+ESI=00013e10 EDI=00051ffc   EIP=0010010d
+EFLAGS=0302 (IF=1 SF=0 ZF=0 CF=0 OF=0)
+Tutor> md 200
+00000200    0b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 ................
+Tutor> t
+Exception 3 at EIP=0010010e: Breakpoint
+Tutor> ~q 
+Quit handler: 
+killing process 2340 Leaving board #1
+tuser@tutor-vserver:~$ exit
+exit
+
+Script done on Wed 13 Oct 2021 12:46:22 PM EDT
+
+
+Script started on Wed 13 Oct 2021 12:48:25 PM EDT
+]0;tuser@tutor-vserver: ~tuser@tutor-vserver:~$ gdb tinny[K[Ky.lnx
+GNU gdb (GDB) 7.0.1-debian
+Copyright (C) 2009 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "i486-linux-gnu".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>...
+Reading symbols from /home/tuser/tiny.lnx...(no debugging symbols found)...done.
+(gdb) tar rem /dev/ttyS0
+Remote debugging using /dev/ttyS0
+0x00100100 in _start ()
+(gdb) set $eip=0x100100
+(gdb) i reg
+eax            0x1	1
+ecx            0x6967c	431740
+edx            0x0	0
+ebx            0x0	0
+esp            0x5788c	0x5788c
+ebp            0x57890	0x57890
+esi            0x13e10	81424
+edi            0x51ffc	335868
+eip            0x100100	0x100100 <_start>
+eflags         0x206	[ PF IF ]
+cs             0x10	16
+ss             0x18	24
+ds             0x18	24
+es             0x18	24
+fs             0x18	24
+gs             0x18	24
+(gdb) x/x 0x200
+0x200:	0x00000000
+(gdb) set *()i)n)t) )*)[C0x200= 0[1@ [C[1@ [1P
+(gdb) set *(int *)0x200 = 0
+[C[C[C[C[C[C[12Px/x 0x200
+0x200:	0x00000000
+(gdb) x/x 0x200
+[C[C[C[C[C[Cset *(int *)0x200 = 0
+[C[C[C[C[C[C[12Px/x 0x200
+[C[C[C[C[C[C[4Pi regx/x 0x200
+[C[C[C[C[C[Cset *(int *)0x200 = 0
+[C[C[C[C[C[C[12Px/x 0x200
+[C[C[C[C[C[Cset *(int *)0x200 = 0
+[C[C[C[C[C[C[12Px/x 0x200
+[C[C[C[C[C[C[4Pi regset $eip=0x100100 0x100100[1@ 
+(gdb) set $eip = 0x100100
+[C[C[C[C[C[C[10Px/x 0x200
+[C[C[C[C[C[Cset *(int *)0x200 = 0
+[C[C[C[C[C[C[12Px/x 0x200
+[C[C[C[C[C[C[4Pi regset $eip=0x100100
+[C[C[C[C[C[Ctar rem /dev/ttyS0
+[C[C[C[C[C[C[1Pset $eip=0x100100
+[C[C[C[C[C[Ci reg[Kx/x 0x200
+[C[C[C[C[C[Cset *(int *)0x200 = 0
+[C[C[C[C[C[C[12Px/x 0x200
+[C[C[C[C[C[Cset $eip = 0x100100
+[C[C[C[C[C[C[Kx/41[Ki0x100100 0x100100
+0x100100 <_start>:	mov    $0x8,%eax
+0x100105 <_start+5>:	add    $0x3,%eax
+0x100108 <_start+8>:	mov    %eax,0x200
+0x10010d <_start+13>:	int3   
+(gdb) b *0x10005105
+Breakpoint 1 at 0x100105
+(gdb) c
+Continuing.
+
+Breakpoint 1, 0x00100105 in _start ()
+(gdb) i reg
+eax            0x8	8
+ecx            0x6967c	431740
+edx            0x0	0
+ebx            0x0	0
+esp            0x5788c	0x5788c
+ebp            0x57890	0x57890
+esi            0x13e10	81424
+edi            0x51ffc	335868
+eip            0x100105	0x100105 <_start+5>
+eflags         0x306	[ PF TF IF ]
+cs             0x10	16
+ss             0x18	24
+ds             0x18	24
+es             0x18	24
+fs             0x18	24
+gs             0x18	24
+(gdb) i regc[Kb *0x100105[K8
+Breakpoint 2 at 0x100108
+(gdb) c
+Continuing.
+
+Breakpoint 2, 0x00100108 in _start ()
+(gdb) cb *0x100108
+[C[C[C[C[C[C[6Pi regc[Ki reg
+eax            0xb	11
+ecx            0x6967c	431740
+edx            0x0	0
+ebx            0x0	0
+esp            0x5788c	0x5788c
+ebp            0x57890	0x57890
+esi            0x13e10	81424
+edi            0x51ffc	335868
+eip            0x100108	0x100108 <_start+8>
+eflags         0x302	[ TF IF ]
+cs             0x10	16
+ss             0x18	24
+ds             0x18	24
+es             0x18	24
+fs             0x18	24
+gs             0x18	24
+(gdb) i regc[Kb *0x100108
+[C[C[C[C[C[C[6Pi regc[Kb *0x100105[Kd
+Breakpoint 3 at 0x10010d
+(gdb) c
+Continuing.
+
+Breakpoint 3, 0x0010010d in _start ()
+(gdb) cb *0x10010d
+[C[C[C[C[C[C[6Pi reg
+eax            0xb	11
+ecx            0x6967c	431740
+edx            0x0	0
+ebx            0x0	0
+esp            0x5788c	0x5788c
+ebp            0x57890	0x57890
+esi            0x13e10	81424
+edi            0x51ffc	335868
+eip            0x
+
+

@@ -1,0 +1,83 @@
+Script started on Sat 06 Nov 2021 07:26:19 PM EDT
+]0;tuser@tutor-vserver: ~tuser@tutor-vserver:~$ mtip -f printbin.lnxscript[Kgdb printbin.lnx
+GNU gdb (GDB) 7.0.1-debian
+Copyright (C) 2009 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "i486-linux-gnu".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>...
+Reading symbols from /home/tuser/printbin.lnx...done.
+(gdb) t[Ktar rem /dev/ttt[KyS0
+Remote debugging using /dev/ttyS0
+0x00100100 in _start ()
+(gdb) set $eip=0x100100
+(gdb) ireg[K[K[K i[Kreg
+eax            0x1	1
+ecx            0x6967c	431740
+edx            0x0	0
+ebx            0x0	0
+esp            0x5788c	0x5788c
+ebp            0x57890	0x57890
+esi            0x13e10	81424
+edi            0x51ffc	335868
+eip            0x100100	0x100100 <_start>
+eflags         0x206	[ PF IF ]
+cs             0x10	16
+ss             0x18	24
+ds             0x18	24
+es             0x18	24
+fs             0x18	24
+gs             0x18	24
+(gdb) x/x 2[K0x200
+0x200:	0x00000000
+(gdb) set *(int *)0x200 = 0
+(gdb) set *(int *)0x200 = 0[C[C[C[C[C[C[12Px/x 0x200
+0x200:	0x00000000
+(gdb) x/x 0x200[C[C[C[C[C[Cset *(int *)0x200 = 0[C[C[C[C[C[C[12Px/x 0x200[C[C[C[C[C[C[4Pi regset $eip=0x100100 =0x100100[C 0x100100
+(gdb) x/41 0x100100
+0x100100 <_start>:	0x3ffff0bc	0x0000bd00	0x01e80000	0xcc000000
+0x100110 <_startupc>:	0xfb1e0ff3	0x53e58955	0xe804ec83	0x0000001c
+0x100120 <_startupc+16>:	0x1ba4c381	0xd4e80000	0xe8000000	0x000001f1
+0x100130 <_startupc+32>:	0x00000be8	0xc4839000	0xc35d5b04	0xc3241c8b
+0x100140 <main>:	0xfb1e0ff3	0x04244c8d	0xfff0e483	0x8955fc71
+0x100150 <main+16>:	0x835153e5	0xe1e810ec	0x81ffffff	0x001b69c3
+0x100160 <main+32>:	0x0cec8300	0xfaa8838d	0xe850ffff	0x000000a1
+0x100170 <main+48>:	0x8310c483	0x458d08ec	0x838d50f4	0xfffffad4
+0x100180 <main+64>:	0x00cee850	0xc4830000	0xf4458b10	0x0000ff25
+0x100190 <main+80>:	0x0cec8300	0x0029e850	0xc4830000	0xf4558b10
+0x1001a0 <main+96>:	0x5004ec83
+(gdb) x/41 0x100100[1P 0x100100i 0x100100
+0x100100 <_start>:	mov    $0x3ffff0,%esp
+0x100105 <_start+5>:	mov    $0x0,%ebp
+0x10010a <_start+10>:	call   0x100110 <_startupc>
+0x10010f <_start+15>:	int3   
+(gdb) b donnible[K[K[K[K[Kibble
+Breakpoint 1 at 0x1001e8
+(gdb) c
+Continuing.
+
+Breakpoint 1, 0x001001e8 in donibble ()
+(gdb) c
+Continuing.
+
+Breakpoint 1, 0x001001e8 in donibble ()
+(gdb) c
+Continuing.
+
+Program received signal SIGTRAP, Trace/breakpoint trap.
+_startupc () at startup.c:7
+7	startup.c: No such file or directory.
+	in startup.c
+(gdb) quit
+A debugging session is active.
+
+	Inferior 1 [Remote target] will be killed.
+
+Quit anyway? (y or n) y
+]0;tuser@tutor-vserver: ~tuser@tutor-vserver:~$ exit
+exit
+
+Script done on Sat 06 Nov 2021 07:29:08 PM EDT

@@ -1,0 +1,18 @@
+Nick Williams
+10/9/2021
+MP1 Write-Up
+1. I tested my code by using various print statements such as the example given into the assignment page. I found that trying to troubleshoot the segmentation errors using gdb was pointless as it seemed to do nothing. While the SAPC version seemed to work correctly, the LINUX version seemed to not do anything other than display the CMDs commands and execute the help and stop commands. I do not fully know the reason behind this, but it might have something to with the way the tutor is set up.
+2. qIf I referenced memory that was nonexistent while running the data, I would simply get a segmentation fault and get booted out of the tutor program. While this was not a regular occurrence when entering existent memory on the SAPC version, the Linux version would always do this, even when entering existing reference memory. 
+3. Figuring out the addresses of the following:
+a. Md xyz == 00101dfc	 41 f4 ff ff 41 f4 ff ff 41 f4 ff ff 41 f4 ff ff
+b. Md pxyz == 00101e0c 9e f3 ff ff 41 f4 ff ff 41 f4 ff ff 41 f4 ff ff; and the value is 6
+c. Cmds array: cmds == 0000000c 53 ff 00 f0 53 ff 00 f0 54 ff 00 f0 88 84 00 f0
+i. Md == 00101e0c ef f2 ff ff 41 f4 ff ff 46 f3 ff ff 41 f4 ff ff
+ii. M == 0000000d ff 00 f0 53 ff 00 f0 54 ff 00 f0 88 84 00 f0 53
+iii. D == 0000001d ff 00 f0 a5 fe 00 f0 87 e9 00 f0 56 0d 00 f0 56
+d. To change the code to change “s” to “x”, you would need to stop the code from running in the machine. As such, I am unable to change the code while running.
+4. The code for the “nm” output starts at 0000001c and ends at 00560d00f0 in SAPC
+5. If the code crashed in Unix, you would get a segmentation fault and in SACP, the crash would cause the command line to stop and display an “exception 14” error.
+6. In SAPC, the location of the %esp is is 0005788c
+7. Nothing much
+8.  I learned how to create a tutor program as well find and analyze the addresses of certain inputs using md and ms. As such, I think it was worth the time I put into this project. The part that I found the hardest was trying to get the LINIX version to run properly and the easiest was getting the SAPC version to run, and as such the difference in the difficulty running them as most interesting to me as they seem to run fine with the code I wrote.

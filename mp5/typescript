@@ -1,0 +1,125 @@
+Script started on Tue 02 Nov 2021 05:35:29 PM EDT
+]0;tuser@tutor-vserver: ~tuser@tutor-vserver:~$ script[Kscriptgdb count.lnx[7Pscriptgdb count.lnx[7Pscriptgdb count.lnx
+GNU gdb (GDB) 7.0.1-debian
+Copyright (C) 2009 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "i486-linux-gnu".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>...
+Reading symbols from /home/tuser/count.lnx...done.
+(gdb) tar rem /dev/ttyS0
+Remote debugging using /dev/ttyS0
+0x00100100 in _start ()
+(gdb) set $eip=0x100100
+(gdb) i reg
+eax            0x1	1
+ecx            0x6967c	431740
+edx            0x0	0
+ebx            0x0	0
+esp            0x5788c	0x5788c
+ebp            0x57890	0x57890
+esi            0x13e10	81424
+edi            0x51ffc	335868
+eip            0x100100	0x100100 <_start>
+eflags         0x206	[ PF IF ]
+cs             0x10	16
+ss             0x18	24
+ds             0x18	24
+es             0x18	24
+fs             0x18	24
+gs             0x18	24
+(gdb) x/x x[K0x200
+0x200:	0x00000000
+(gdb) set *(int *) [K0x02[K[K200 = 0
+(gdb) set *(int *)0x200 = 0[C[C[C[C[C[C[12Px/x 0x200
+0x200:	0x00000000
+(gdb) x4i/x 0x200[C[C[C[C[C[Cset *(int *)0x200 = 0[C[C[C[C[C[C[12Px/x 0x200[K[K[K1[2Pi regset $eip=0x100100 0x100100[1@ 
+(gdb) set $eip = 0x100100[C[C[C[C[C[C[10Px/x 0x200[C[C[C[C[C[Cset *(int *)0x200 = 0[C[C[C[C[C[C[12Px/x 0x200[C[C[C[C[K[K[K[K[K[K[K4i 0x100100
+0x100100 <_start>:	mov    $0x3ffff0,%esp
+0x100105 <_start+5>:	mov    $0x0,%ebp
+0x10010a <_start+10>:	call   0x100110 <_startupc>
+0x10010f <_start+15>:	int3   
+(gdb) b *0x1000[K105
+Breakpoint 1 at 0x100105
+(gdb) c
+Continuing.
+
+Breakpoint 1, 0x00100105 in _start ()
+(gdb) i reg
+eax            0x1	1
+ecx            0x6967c	431740
+edx            0x0	0
+ebx            0x0	0
+esp            0x3ffff0	0x3ffff0
+ebp            0x57890	0x57890
+esi            0x13e10	81424
+edi            0x51ffc	335868
+eip            0x100105	0x100105 <_start+5>
+eflags         0x306	[ PF TF IF ]
+cs             0x10	16
+ss             0x18	24
+ds             0x18	24
+es             0x18	24
+fs             0x18	24
+gs             0x18	24
+(gdb) i regc[Kb *0x100105[Ka
+Breakpoint 2 at 0x10010a
+(gdb) c
+Continuing.
+
+Breakpoint 2, 0x0010010a in _start ()
+(gdb) i reg
+eax            0x1	1
+ecx            0x6967c	431740
+edx            0x0	0
+ebx            0x0	0
+esp            0x3ffff0	0x3ffff0
+ebp            0x0	0x0
+esi            0x13e10	81424
+edi            0x51ffc	335868
+eip            0x10010a	0x10010a <_start+10>
+eflags         0x306	[ PF TF IF ]
+cs             0x10	16
+ss             0x18	24
+ds             0x18	24
+es             0x18	24
+fs             0x18	24
+gs             0x18	24
+(gdb) i regc[Kb *0x10010a[Kf
+Breakpoint 3 at 0x10010f
+(gdb) c
+Continuing.
+
+Breakpoint 3, 0x0010010f in _start ()
+(gdb) i reg
+eax            0x0	0
+ecx            0x3fffe0	4194272
+edx            0x1017f8	1054712
+ebx            0x0	0
+esp            0x3ffff0	0x3ffff0
+ebp            0x0	0x0
+esi            0x13e10	81424
+edi            0x101e08	1056264
+eip            0x10010f	0x10010f <_start+15>
+eflags         0x206	[ PF IF ]
+cs             0x10	16
+ss             0x18	24
+ds             0x18	24
+es             0x18	24
+fs             0x18	24
+gs             0x18	24
+(gdb) i regc[Kb *0x10010f[C[C[C[C[C[C[6Pi regc[Kb *0x10010a[C[C[C[C[C[C[6Pi regc[Kb *0x100105[C[C[C[C[C[Cx/4i 0x100100[C[C[C[C[C[C[6@set $eip =[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[10Px/x 0x200[C[C[C[C[C[Cset *(int *)0x200 = 0[C[C[C[C[C[C[12Px/x 0x200
+0x200:	0x00000000
+(gdb) q
+A debugging session is active.
+
+	Inferior 1 [Remote target] will be killed.
+
+Quit anyway? (y or n) y
+]0;tuser@tutor-vserver: ~tuser@tutor-vserver:~$ exit
+exit
+
+Script done on Tue 02 Nov 2021 05:39:42 PM EDT

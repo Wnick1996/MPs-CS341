@@ -1,0 +1,174 @@
+Script started on Tue 02 Nov 2021 05:35:29 PM EDT
+]0;tuser@tutor-vserver: ~tuser@tutor-vserver:~$ script[Kscriptgdb count.lnx[7Pscriptgdb count.lnx[7Pscriptgdb count.lnx
+GNU gdb (GDB) 7.0.1-debian
+Copyright (C) 2009 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "i486-linux-gnu".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>...
+Reading symbols from /home/tuser/count.lnx...done.
+(gdb) tar rem /dev/ttyS0
+Remote debugging using /dev/ttyS0
+0x00100100 in _start ()
+(gdb) set $eip=0x100100
+(gdb) i reg
+eax            0x1	1
+ecx            0x6967c	431740
+edx            0x0	0
+ebx            0x0	0
+esp            0x5788c	0x5788c
+ebp            0x57890	0x57890
+esi            0x13e10	81424
+edi            0x51ffc	335868
+eip            0x100100	0x100100 <_start>
+eflags         0x206	[ PF IF ]
+cs             0x10	16
+ss             0x18	24
+ds             0x18	24
+es             0x18	24
+fs             0x18	24
+gs             0x18	24
+(gdb) x/x x[K0x200
+0x200:	0x00000000
+(gdb) set *(int *) [K0x02[K[K200 = 0
+(gdb) set *(int *)0x200 = 0[C[C[C[C[C[C[12Px/x 0x200
+0x200:	0x00000000
+(gdb) x4i/x 0x200[C[C[C[C[C[Cset *(int *)0x200 = 0[C[C[C[C[C[C[12Px/x 0x200[K[K[K1[2Pi regset $eip=0x100100 0x100100[1@ 
+(gdb) set $eip = 0x100100[C[C[C[C[C[C[10Px/x 0x200[C[C[C[C[C[Cset *(int *)0x200 = 0[C[C[C[C[C[C[12Px/x 0x200[C[C[C[C[K[K[K[K[K[K[K4i 0x100100
+0x100100 <_start>:	mov    $0x3ffff0,%esp
+0x100105 <_start+5>:	mov    $0x0,%ebp
+0x10010a <_start+10>:	call   0x100110 <_startupc>
+0x10010f <_start+15>:	int3   
+(gdb) b *0x1000[K105
+Breakpoint 1 at 0x100105
+(gdb) c
+Continuing.
+
+Breakpoint 1, 0x00100105 in _start ()
+(gdb) i reg
+eax            0x1	1
+ecx            0x6967c	431740
+edx            0x0	0
+ebx            0x0	0
+esp            0x3ffff0	0x3ffff0
+ebp            0x57890	0x57890
+esi            0x13e10	81424
+edi            0x51ffc	335868
+eip            0x100105	0x100105 <_start+5>
+eflags         0x306	[ PF TF IF ]
+cs             0x10	16
+ss             0x18	24
+ds             0x18	24
+es             0x18	24
+fs             0x18	24
+gs             0x18	24
+(gdb) i regc[Kb *0x100105[Ka
+Breakpoint 2 at 0x10010a
+(gdb) c
+Continuing.
+
+Breakpoint 2, 0x0010010a in _start ()
+(gdb) i reg
+eax            0x1	1
+ecx            0x6967c	431740
+edx            0x0	0
+ebx            0x0	0
+esp            0x3ffff0	0x3ffff0
+ebp            0x0	0x0
+esi            0x13e10	81424
+edi            0x51ffc	335868
+eip            0x10010a	0x10010a <_start+10>
+eflags         0x306	[ PF TF IF ]
+cs             0x10	16
+ss             0x18	24
+ds             0x18	24
+es             0x18	24
+fs             0x18	24
+gs             0x18	24
+(gdb) i regc[Kb *0x10010a[Kf
+Breakpoint 3 at 0x10010f
+(gdb) c
+Continuing.
+
+Breakpoint 3, 0x0010010f in _start ()
+(gdb) i reg
+eax            0x0	0
+ecx            0x3fffe0	4194272
+edx            0x1017f8	1054712
+ebx            0x0	0
+esp            0x3ffff0	0x3ffff0
+ebp            0x0	0x0
+esi            0x13e10	81424
+edi            0x101e08	1056264
+eip            0x10010f	0x10010f <_start+15>
+eflags         0x206	[ PF IF ]
+cs             0x10	16
+ss             0x18	24
+ds             0x18	24
+es             0x18	24
+fs             0x18	24
+gs             0x18	24
+(gdb) i regc[Kb *0x10010f[C[C[C[C[C[C[6Pi regc[Kb *0x10010a[C[C[C[C[C[C[6Pi regc[Kb *0x100105[C[C[C[C[C[Cx/4i 0x100100[C[C[C[C[C[C[6@set $eip =[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[10Px/x 0x200[C[C[C[C[C[Cset *(int *)0x200 = 0[C[C[C[C[C[C[12Px/x 0x200
+0x200:                             100% 4356     4.3KB/s   00:00    
+timepack_sapc.o                                 0%    0     0.0KB/s   --:-- ETAtimepack_sapc.o                               100% 9580     9.4KB/s   00:00    
+typescript                                      0%    0     0.0KB/s   --:-- ETAtypescript                                    100% 4334     4.2KB/s   00:00    
+watchdog.c                                      0%    0     0.0KB/s   --:-- ETAwatchdog.c                                    100% 2664     2.6KB/s   00:00    
+watchdog.lnx                                    0%    0     0.0KB/s   --:-- ETAwatchdog.lnx                                  100%   35KB  35.3KB/s   00:00    
+watchdog.o                                      0%    0     0.0KB/s   --:-- ETAwatchdog.o                                    100% 8308     8.1KB/s   00:00    
+watchdog.syms                                   0%    0     0.0KB/s   --:-- ETAwatchdog.syms                                 100% 1970     1.9KB/s   00:00    
+tuser@tutor-vserver:~$ scp nick1996@users.cs.umb.edu:cs341/mp5/* .[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[14Psh nick1996@users.cs.umb.edu[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cexit[Kgcc -o charGen1 charGen1.c[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cls[Kgcc -o charGen1 charGen1.c
+tuser@tutor-vserver:~$ gcc -o charGen1 charGen1.c[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Kgcc -o charGen1 charGen1.c[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cscp nick1996@users.cs.umb.edu:cs341/mp5/* .[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[14Psh nick1996@users.cs.umb.edu[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cexit[Kgcc -o charGen1 charGen1.c[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cls[Kscp nick1996@users.cs.umb.edu:cs341/mp5/* .[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cexit[Kmtip -f measure.lnxls[Kscp nick1996@users.cs.umb.edu:cs341/mp4/* .[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[14Psh nick1996@users.cs.umb.edu[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[19Pmake clean[6Pexitmtip -f measure.lnxls[Kscp nick1996@users.cs.umb.edu:cs341/mp4/* .[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cls[Kmtip -f measure.lnx[1P.lnx[1P.lnx[1P.lnx[1P.lnx[1P.lnx[1P.lnx[1P.lnxw.lnxa.lnxt.lnxc.lnxh.lnxd.lnxo.lnxg.lnx
+For command help, type ~?
+For help on args, rerun without args
+Code starts at 0x100100
+Using board # 1 
+Please type <CR> to confirm console setting: 
+Setting console dev to COM2Console: colour EGA+ 80x25
+COM1 at 0x03f8 (irq = 4) is a 16550A
+COM2 at 0x02f8 (irq = 3) is a 16550A
+
+                 Welcome to UMB Tutor for the PC
+   UMB Tutor is a 32-bit protected-mode PC debugger/downloader,
+       based on Linux, UMB Tutor for m68k, and remote gdb.
+UMB Tutor is free software and you are welcome to distribute copies
+of it under certain conditions.  There is no warranty for this program.
+The copyright and warranty provisions follow the Gnu general public
+license, available for view in gdb and elsewhere.  Full sources available.
+--bugs, suggestions, questions to eoneil@cs.umb.edu
+
+Exception 3 at EIP=00057a9b: Breakpoint
+Tutor> go 100100         ~downloading watchdog.lnx
+
+........Done.
+
+Download done, setting EIP to 100100.
+Tutor> <Esc>
+<Esc>
+AA<Esc>
+B go 100100
+No such command: AAgo 100100, use h command for help
+Tutor> goo  100100
+Calling set_intr_gate (irq = 3, n = 0x23) to arm interrupt...
+Commanding PIC to interrupt CPU for irq 3 (COM2_IRQ)
+enabling receiver interrupts in UART...
+...done, entering almost-infinite loop
+new char received is= A
+new char received is= B
+new char received is= C
+new char received is= D
+new char received is= E
+new char received is= F
+new char received is= G
+new char received is= 0
+new char received is= 1
+new char received is= 2
+~q 
+Quit handler: 
+killing process 1887 Leaving board #1
+tuser@tutor-vserver:~$ exit
+exit
+
+Script done on Wed 15 Dec 2021 10:56:43 PM EST

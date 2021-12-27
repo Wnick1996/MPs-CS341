@@ -1,0 +1,48 @@
+CS341 Machine Project 1
+
+Grading Rubric
+
+Student Name: _______________William, Nick John______________________________
+
+
+Points out of Total
+1. Complete mp1warm up
+	Typescript file in examples/test_dir OK ____5_____/5
+
+2. Use of UNIX and SAPC Development Tools _____10_____/ 10
+	Student successfully built code for both systems = 10
+	Student successfully built code for only one system = 5
+	Student did not successfully build the code for either system = 0 (Note: rest of rubric is irrelevant and total score should be 0.)
+
+3. Correct and complete implementation of md command ____10______/ 10
+	Format of line displays address, 16 hex values and 16 ASCII characters = 10
+	Format of line missing one of the above three elements = 5
+	Format of line missing two of the above three elements = 0
+
+4. Correct and complete implementation of ms command _____5_____/ 5
+	Code is capable of setting one byte in memory in both systems = 5
+	Otherwise = 0
+
+5. Correct and complete implementation of help command ____5______/ 5
+	Code displays help text for a single command and all commands = 5
+	Code is capable of displaying only one or the other of above = 2
+	Otherwise = 0
+
+6. Memo and examples demonstrating access to memory ____10______/10
+	Two points each for any five of the discussion.txt questions
+
+	1. ___2___
+
+	2. ___2___
+
+	3. ___2___
+	
+	4. ___2___
+
+	5. ___2___
+
+Total Score: _____45_____/45
+
+Grader Comments:
+	Good job, interesting* way for your mem_display implementation. 
+

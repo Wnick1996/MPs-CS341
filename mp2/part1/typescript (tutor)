@@ -1,0 +1,138 @@
+Script started on Wed 20 Oct 2021 11:10:03 PM EDT
+tuser@tutor-vserver:~$ exitssh nick1996@users.cs.umb.edu
+nick1996@users.cs.umb.edu's password: 
+Welcome to Ubuntu 20.04.3 LTS (GNU/Linux 5.4.0-81-generic x86_64)
+
+  System information as of Wed 20 Oct 2021 11:10:09 PM EDT
+
+  System load:  0.0                 Temperature:           46.0 C
+  Usage of /:   15.5% of 195.86GB   Processes:             531
+  Memory usage: 3%                  Users logged in:       24
+  Swap usage:   0%                  IPv4 address for eno1: 158.121.104.215
+
+Contact: operator@cs.umb.edu or 617-287-6480
+You have new mail.
+Last login: Wed Oct 20 23:08:18 2021 from 73.186.218.5
+nick1996@pe15:~$ exitscript[2Pexitquitmake A=countcd /courses/cs341/f21/cheungr/nick1996/mp2/part1[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cmake A=count[Kcd /courses/cs341/f21/cheungr/nick1996/mp2/part1
+nick1996@pe15:/courses/cs341/f21/cheungr/nick1996/mp2/part1$ cd /courses/cs341/f21/cheungr/nick1996/mp2/part1[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cexit[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cscript[2Pexitquitmake A=count
+as --32 -o count.o count.s
+count.s: Assembler messages:
+count.s:27: Warning: end of file not at end of a line; newline inserted
+gcc -gdwarf-2 -gstrict-dwarf -march=i586 -m32 -fno-builtin -fno-stack-protector -nostdlib     -c -Wall -I/home/cheungr/serl/tutor-linux/include -c -o countc.o countc.c
+ld -m elf_i386 -N -Ttext 100100 -o count.lnx \
+	/home/cheungr/serl/tutor-linux/libc/startup0.o /home/cheungr/serl/tutor-linux/libc/startup.o \
+	countc.o count.o /home/cheungr/serl/tutor-linux/libc/libc.a
+rm -f syms;nm -n count.lnx>count.syms;ln -s count.syms syms
+nick1996@pe15:/courses/cs341/f21/cheungr/nick1996/mp2/part1$ make A=count
+make: 'count.lnx' is up to date.
+nick1996@pe15:/courses/cs341/f21/cheungr/nick1996/mp2/part1$ exit
+logout
+Connection to users.cs.umb.edu closed.
+tuser@tutor-vserver:~$ ssh nick1996@users.cs.umb.edu[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cexit[Kssh nick1996@users.cs.umb.edu[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccript[Ksh nick1996@users.cs.umb.edu[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[14Pmtip -f count.s[3Pake A=counttip -f count.s[Klnx[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kls
+a.out       CR                         [0m[01;32mstrncpy.lnx[0m  [01;34mtestelf[0m       tiny.s
+countc.c    [01;34minclude[0m                    strncpy.o    testelf.syms  tutor.c
+[01;32mcount.lnx[0m   [01;34mlib[0m                        strncpy.s    [01;32mtest.lnx[0m      [01;32mtutor.lnx[0m
+count.o     nick1996@users.cs.umb.edu  [01;32mtest[0m         test.s        tutor.o
+count.s     strcpy.s                   [01;34mtestaout[0m     [01;32mtiny.lnx[0m      typescript
+count.syms  strncpyc.c                 test.c       tiny.o
+tuser@tutor-vserver:~$ scp [2Plsssh nick1996@users.cs.umb.edu[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cexit[Kssh nick1996@users.cs.umb.edu[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccript[Ksh nick1996@users.cs.umb.edu[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[14Pmtip -f count.s[3Pake A=countscp nick1996@users.cs.umb.edu:cs341/mp2/count.* .[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cexit[Kssh nick1996@users.cs.umb.edu[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cexit[Kssh nick1996@users.cs.umb.edu[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cexit[Kscp nick1996@users.cs.umb.edu:cs341/mp2/count.* .[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cexit[Kscp nick1996@users.cs.umb.edu:cs341/mp2/count.* .[K[C[C[C[C[1@/[1@p[1@a[1@r[1@t[1P[1P[1P[1P[C[1@p[1@a[1@r[1@1[1P[1@t[1@1
+usage: scp [-1246BCpqrv] [-c cipher] [-F ssh_config] [-i identity_file]
+           [-l limit] [-o ssh_option] [-P port] [-S program]
+           [[user@]host1:]file1 ... [[user@]host2:]file2
+tuser@tutor-vserver:~$ scp nick1996@users.cs.umb.edu:cs341/mp2/part1/count.* [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cls[Kscp nick1996@users.cs.umb.edu:cs341/mp2/part1/count.* [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cls[Kssh nick1996@users.cs.umb.edu[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cexit[Kssh nick1996@users.cs.umb.edu[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccript[Ksh nick1996@users.cs.umb.edu[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[14Pmtip -f count.s[3Pake A=countscp nick1996@users.cs.umb.edu:cs341/mp2/count.* .[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cexit[Kscp nick1996@users.cs.umb.edu:cs341/mp2/count.* .[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cmake A=count[Kscp nick1996@users.cs.umb.edu:cs341/mp2/count.* .[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cmake A=count[Ktip -f count.sssh nick1996@users.cs.umb.edu[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccript[Ksh nick1996@users.cs.umb.edu[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cexit[Kssh nick1996@users.cs.umb.edu[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cls[Kscp nick1996@users.cs.umb.edu:cs341/mp2/part1/count.* [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Kscp nick1996@users.cs.umb.edu:cs341/mp2/part1/count.* .
+nick1996@users.cs.umb.edu's password: 
+count.lnx                                       0%    0     0.0KB/s   --:-- ETAcount.lnx                                     100%   30KB  29.9KB/s   00:00    
+count.o                                         0%    0     0.0KB/s   --:-- ETAcount.o                                       100%  568     0.6KB/s   00:00    
+count.s                                         0%    0     0.0KB/s   --:-- ETAcount.s                                       100%  655     0.6KB/s   00:00    
+count.syms                                      0%    0     0.0KB/s   --:-- ETAcount.syms                                    100% 1046     1.0KB/s   00:00    
+tuser@tutor-vserver:~$ ls
+a.out       CR                         [0m[01;32mstrncpy.lnx[0m  [01;34mtestelf[0m       tiny.s
+countc.c    [01;34minclude[0m                    strncpy.o    testelf.syms  tutor.c
+[01;32mcount.lnx[0m   [01;34mlib[0m                        strncpy.s    [01;32mtest.lnx[0m      [01;32mtutor.lnx[0m
+count.o     nick1996@users.cs.umb.edu  [01;32mtest[0m         test.s        tutor.o
+count.s     strcpy.s                   [01;34mtestaout[0m     [01;32mtiny.lnx[0m      typescript
+count.syms  strncpyc.c                 test.c       tiny.o
+tuser@tutor-vserver:~$ mptip[K[K[K[Ktip -f count.lnx
+For command help, type ~?
+For help on args, rerun without args
+Code starts at 0x100100
+Using board # 1 
+Please type <CR> to confirm console setting: 
+Setting console dev to COM2Console: colour EGA+ 80x25
+COM1 at 0x03f8 (irq = 4) is a 16550A
+COM2 at 0x02f8 (irq = 3) is a 16550A
+
+                 Welcome to UMB Tutor for the PC
+   UMB Tutor is a 32-bit protected-mode PC debugger/downloader,
+       based on Linux, UMB Tutor for m68k, and remote gdb.
+UMB Tutor is free software and you are welcome to distribute copies
+of it under certain conditions.  There is no warranty for this program.
+The copyright and warranty provisions follow the Gnu general public
+license, available for view in gdb and elsewhere.  Full sources available.
+--bugs, suggestions, questions to eoneil@cs.umb.edu
+
+Exception 3 at EIP=00057a9b: Breakpoint
+Tutor> ~downloading count.lnx
+
+........Done.
+
+Download done, setting EIP to 100100.
+Tutor> md 100100
+00100100    bc f0 ff 3f 00 bd 00 00 00 00 e8 01 00 00 00 cc ...?............
+Tutor> m rd
+EAX=00000001 EBX=00000000   EBP=00057890
+EDX=00000000 ECX=0006967c   ESP=0005788c
+ESI=00013e10 EDI=00051ffc   EIP=00100100
+EFLAGS=0206 (IF=1 SF=0 ZF=0 CF=0 OF=0)
+Tutor> md 200
+00000200    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 ................
+Tutor> ms 200 00000000
+Tutor> md 200
+00000200    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 ................
+Tutor> rs eip 100100
+Tutor> t
+Exception 1 at EIP=00100105: Debugger interrupt
+Tutor> rd
+EAX=00000001 EBX=00000000   EBP=00057890
+EDX=00000000 ECX=0006967c   ESP=003ffff0
+ESI=00013e10 EDI=00051ffc   EIP=00100105
+EFLAGS=0306 (IF=1 SF=0 ZF=0 CF=0 OF=0)
+Tutor> rd  md 200
+00000200    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 ................
+Tutor> t
+Exception 1 at EIP=0010010a: Debugger interrupt
+Tutor> rd
+EAX=00000001 EBX=00000000   EBP=00000000
+EDX=00000000 ECX=0006967c   ESP=003ffff0
+ESI=00013e10 EDI=00051ffc   EIP=0010010a
+EFLAGS=0306 (IF=1 SF=0 ZF=0 CF=0 OF=0)
+Tutor> md 200
+00000200    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 ................
+Tutor> t
+Exception 1 at EIP=00100110: Debugger interrupt
+Tutor> rd
+EAX=00000001 EBX=00000000   EBP=00000000
+EDX=00000000 ECX=0006967c   ESP=003fffec
+ESI=00013e10 EDI=00051ffc   EIP=00100110
+EFLAGS=0306 (IF=1 SF=0 ZF=0 CF=0 OF=0)
+Tutor> md 200
+00000200    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 ................
+Tutor> t
+Exception 1 at EIP=00100114: Debugger interrupt
+Tutor> rd  rd
+EAX=00000001 EBX=00000000   EBP=00000000
+EDX=00000000 ECX=0006967c   ESP=003fffec
+ESI=00013e10 EDI=00051ffc   EIP=00100114
+EFLAGS=0306 (IF=1 SF=0 ZF=0 CF=0 OF=0)
+Tutor> md 200
+00000200    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 ................
+Tutor> t
+Exception 1 at EIP=00100115: Debugger interrupt
+Tutor> ~q 
+Quit handler: 
+killing process 1844 Leaving board #1
+tuser@tutor-vserver:~$ exit
+exit
+
+Script done on Wed 20 Oct 2021 11:15:39 PM EDT

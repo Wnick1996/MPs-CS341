@@ -1,0 +1,14 @@
+CS341 Machine Project 3
+
+Grading Rubric
+
+Student Name: Williams,Nick John
+
+Points out of Total
+
+1. Correct and complete implementation of echo:  20  /20
+
+Total Score:   20 /20
+
+Grader Comments:
+	Good Job.

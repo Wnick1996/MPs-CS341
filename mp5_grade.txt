@@ -1,0 +1,21 @@
+CS341 Machine Project 5
+
+Grading Rubric
+
+Student Name: Williams,Nick John
+
+Points out of Total
+
+1. Part 1 : program in provided watchdog.lnx is functioning:	10 /10
+	(the program stops at the infinite loop)
+
+2. Part 2a: program with watchdog timer and reset is functioning:	10 /10
+	(the program can continue on with the infinite loop bug)
+
+3. Part 2b: program with watchdog timer and kickdog function is working:	10 /10
+	(the program can continue on with the infinite loop bug)
+
+Total Score:	30 /30
+
+Grader Comments:	
+	Good Job.

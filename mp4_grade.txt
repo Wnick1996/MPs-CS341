@@ -1,0 +1,17 @@
+CS341 Machine Project 4
+
+Grading Rubric
+
+Student Name: Williams, Nick John
+
+Points out of Total
+
+1. Part 1 : program in computing time is functioning:	10 /10
+
+2. Part 2: program in computing time w/finer resolution is functioning:		20 /20
+	If the timing estimates are not close for msec cases, score 10/20
+
+Total Score:	30 /30
+
+Grader Comments:
+	Good Job.

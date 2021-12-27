@@ -1,0 +1,21 @@
+CS341 Machine Project 2 Grading Rubric
+
+Student Name: William, Nick John  
+
+Points out of Total
+	0. Correct and complete implementation of mp2warmup  	10 /10
+
+	1. Correct and complete implementation of count   	5 /10
+
+	2. Correct and complete implementation of printbin   	10 /10
+
+	3. Correct and complete implementation of strncpy  	8 /10
+
+		Including explanation of what happens if string too long = 10
+
+		Without explanation of what happens if string too long = 8
+
+Total Score ______33____/40
+
+Grader Comments:
+	Your part1 implementation does not count our desired character, instead it retursn the string length. You have a problem with your character comparison.
